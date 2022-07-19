@@ -28,7 +28,6 @@ const App = () => {
                 return <Card title={el} />;
             })}
             {data}
-            
         <button>
             className="check"
             onClick={}
