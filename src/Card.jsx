@@ -1,36 +1,23 @@
 import { useState } from "react";
-import "./App.css";
-import Card from "./components/Card";
 
-const App = () => {
-    const [data, setData] = useState([]);
-
-   let a = ""; 
-    return (
-        <div className="container">
-            <h1> TO DO LIST</h1>
-         <div> className="unos">
-            <input
-            type="text"
-            onChange={(e) => {
-                a = e.target.value;
-            }}
-            />
-            <button
-            onClick={() => {
-                setData([...data, a]);
-            }}
-            >
-                Submit
-            </button>
-            </div>
-            {data.map((el) => {
-                return <Card title={el} />;
-            })}
-            {data}
-        <button>
-            className="check"
-            onClick={}
+const Card = (props) => {
+  const [isChecked, setIsChecked] = useState(false);
+  return (
+    <div className={`card ${isChecked ? "checked" : ""}`}>
+      <p>{props.title}</p>
+      <div>
+        <button
+          className="check"
+          onClick={() => {
+            setIsChecked(!isChecked);
+          }}
+        >
+          CEKIRAJ
         </button>
-            )
-}
+        <button className="delete">delete</button>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
