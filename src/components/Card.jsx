@@ -26,4 +26,8 @@ const Card = (props) => {
   );
 };
 
+
+
 export default Card;
+
+// useEffect - reakcija cele komponente na nesto
