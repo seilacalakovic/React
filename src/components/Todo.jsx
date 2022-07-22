@@ -37,4 +37,4 @@ const Todo = () => {
   );
 };
 
-export default App;
+export default Todo;
