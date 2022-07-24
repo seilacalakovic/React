@@ -1,57 +1,58 @@
 .container {
-    width: 100%;
-    background-color: rgb(209, 42, 195);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  h1 {
-    font-size: 60px;
-    color: white;
-  }
-  
-  .unos {
-    margin: 20px 0;
-  }
-  input {
-    padding: 10px 20px;
-    font-size: 25px;
-  }
-  
-  .card {
-    background-color: orange;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    margin: 20px 0;
-    width: 500px;
-  }
-  .checked {
-    background-color: greenyellow;
-  }
-  .card div {
-    height: 100%;
-    width: 30%;
-  }
-  
-  .card button {
-    height: 100%;
-    border-radius: 10px;
-    border: none;
-  }
-  
-  .check {
-    background-color: green;
-  }
-  
-  .delete {
-    background-color: red;
-  }
-  
-  p {
-    color: white;
-    font-size: 23px;
-  }
+  width: 100%;
+  background-color: rgb(209, 42, 195);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 60px;
+  /* color: white; */
+  border: 1px solid red;
+}
+
+.unos {
+  margin: 20px 0;
+}
+input {
+  padding: 10px 20px;
+  font-size: 25px;
+}
+
+.card {
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 20px 0;
+  width: 500px;
+}
+.checked {
+  background-color: greenyellow;
+}
+.card div {
+  height: 100%;
+  width: 30%;
+}
+
+.card button {
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+.check {
+  background-color: green;
+}
+
+.delete {
+  background-color: red;
+}
+
+p {
+  color: white;
+  font-size: 23px;
+}
