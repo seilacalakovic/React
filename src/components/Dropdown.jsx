@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Styles.css";
 function Dropdown([ selected, setSelected ]) {
     const [isActive, setIsActive] = useState(false);
     const options = ["React", "Vue", "Angular"];
@@ -6,7 +7,7 @@ function Dropdown([ selected, setSelected ]) {
         <div className="dropdown">
             <div className="dropdown-btn" onClick={(e) => 
             setIsActive(!isActive)}>
-                Choose One 
+                {selected}
                 <span className="fas fa-caret-down"></span>
             </div>
             {isActive && (
@@ -14,7 +15,7 @@ function Dropdown([ selected, setSelected ]) {
                     {options.map((option) => (
                         <div onClick={(e) => {
                             setSelected(option)
-                            setActive(false)
+                            setIsActive(false)
                         }
                     }className="dropdown-item">
                         {option}
