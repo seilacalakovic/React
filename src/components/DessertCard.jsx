@@ -3,27 +3,41 @@ import "./App.css";
 import DessertCard from "./components/DessertCard";
 
 const App = () => {
-    const [dessert, setDessert] = useState ([]);
+  const [desserts, setDesserts] = useState([]);
+  let inputValue = "";
+  const getDesserts = async (size) => {
+    const res = await fetch(
+      `https://random-data-api.com/api/dessert/random_dessert?size=${size}`
+    );
+    const data = await res.json();
+    setDesserts(data);
+    console.log(data);
+  };
 
-    const getDessert = async () => {
-        const res = await fetch(
-            "https://random-data-api.com/api/dessert/random_dessert?size=100"
-        );
-        const data = await res.json();
-        setDessert(data)
-        console.log(data);
-    }
-}
+  useEffect(() => {
+    getDesserts(100);
+  }, []);
 
-useEffect (() => {
-    getDessert();
-}
-)
+  return (
+    <div>
+      <input
+        type="text"
+        onChange={(e) => {
+          inputValue = Number(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          getDesserts(inputValue);
+        }}
+      >
+        Submit
+      </button>
+      {desserts.map((dessert) => {
+        return <DessertCard des={dessert} key={dessert.uid} />;
+      })}
+    </div>
+  );
+};
 
-<input 
-onClick={() => {
-    dessert(searchValue);
-  }}
->
-  Submit
-  </input>
+export default App;
