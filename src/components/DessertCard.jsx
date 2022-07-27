@@ -1,43 +1,11 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import DessertCard from "./components/DessertCard";
-
-const App = () => {
-  const [desserts, setDesserts] = useState([]);
-  let inputValue = "";
-  const getDesserts = async (size) => {
-    const res = await fetch(
-      `https://random-data-api.com/api/dessert/random_dessert?size=${size}`
-    );
-    const data = await res.json();
-    setDesserts(data);
-    console.log(data);
-  };
-
-  useEffect(() => {
-    getDesserts(100);
-  }, []);
-
+const DessertCard = ({ des }) => {
   return (
-    <div>
-      <input
-        type="text"
-        onChange={(e) => {
-          inputValue = Number(e.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          getDesserts(inputValue);
-        }}
-      >
-        Submit
-      </button>
-      {desserts.map((dessert) => {
-        return <DessertCard des={dessert} key={dessert.uid} />;
-      })}
+    <div style={{ border: "1px solid black", margin: "30px" }} key={des.uid}>
+      <h1>{des.id}</h1>
+      <h1>{des.flavor}</h1>
+      <h1>{des.topping}</h1>
     </div>
   );
 };
 
-export default App;
+export default DessertCard;
