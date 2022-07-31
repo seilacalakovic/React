@@ -35,6 +35,8 @@ function App() {
     return digits;
   };
 
+
+  
   const calculate = () => {
     setCalc(eval(calc).toString());
   };
