@@ -15,6 +15,7 @@
   body {
     background-color: var(--light);
   }
+
   .App {
     display: flex;
     min-height: 100vh;
@@ -40,10 +41,12 @@
     font-size: 24px;
     font-weight: 300;
   }
+
   .display span {
     font-size: 14px;
     color: rgb(8, 0, 0);
   }
+
   button {
     appearance: none;
     border: none;
@@ -59,9 +62,11 @@
   button:hover {
     opacity: 0.9%;
   }
+
   .operators {
     display: flex;
   }
+  
   .operators button {
     flex: 1 1 0%;
     background-color: var(--primary);
