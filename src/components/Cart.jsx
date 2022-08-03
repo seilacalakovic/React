@@ -1,4 +1,4 @@
 import { useMemo } from "react";
-import Article from "react";
+import Article from "./Article";
 
 
