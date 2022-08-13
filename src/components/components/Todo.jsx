@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "../../App.css";
-
-import Card from "./components/components/Card";
+import { Link } from "react-router-dom";
+import Card from "./Card";
 const Todo = () => {
-  const [data, setData] = useState([]);
+const [data, setData] = useState [()];
+
 
   let a = "";
   return (
@@ -37,6 +37,7 @@ const Todo = () => {
     </div>
   );
 };
+
 
 
 export default Todo;
