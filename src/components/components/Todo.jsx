@@ -1,43 +1,56 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "ADD":
+      return [...state, action.payload];
+    case "DELETE":
+      return state.filter((el, index) => index !== action.payload);
+    default:
+      return state;
+  }
+};
+
 const Todo = () => {
-const [data, setData] = useState [()];
+  // const [data, setData] = useState([]);
+  const [data, dispatch] = useReducer(reducer, []);
+  const [input, setInput] = useState("");
 
-
-  let a = "";
   return (
     <div className="container">
       <h1>TODO LIST</h1>
-      <div className="unos">
+      <Link to={"/"}>HOME</Link>
+      <form
+        className="unos"
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch({ type: "ADD", payload: input });
+          setInput("");
+        }}
+      >
         <input
           type="text"
           onChange={(e) => {
-            a = e.target.value;
+            setInput(e.target.value);
           }}
+          value={input}
         />
-        <button
-          onClick={() => {
-            setData([...data, a]);
-          }}
-        >
-          Submit
-        </button>
-      </div>
+        <button type="submit">Submit</button>
+      </form>
       {data.map((el, i) => {
         return (
-         <Card
-         title={el} 
-        onDelete = {() => {
-          setData(data.filter((el, index) => i !== index));
-        }}
-        />
-      );
+          <Card
+            title={el}
+            onDelete={() => {
+              dispatch({ type: "DELETE", payload: i });
+            }}
+          />
+        );
       })}
     </div>
   );
 };
 
-
 export default Todo;
-
