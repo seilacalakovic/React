@@ -14,7 +14,7 @@ const reducer = (state, action) => {
 };
 
 const Todo = () => {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [data, dispatch] = useReducer(reducer, []);
   const [input, setInput] = useState("");
 
