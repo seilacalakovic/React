@@ -1,0 +1,15 @@
+.messages-box {
+    min-height: 92vh;
+    max-height: 92vh;
+    overflow-y: scroll;
+  }
+  
+  .recent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .tuc {
+    background-color: #b3b3b3;
+    color: black;
+  }
