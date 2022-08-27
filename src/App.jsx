@@ -9,6 +9,7 @@ const App = () => {
           setUser(user - 1);
         }}
       >
+        
         -
       </button>
       <h1>{user}</h1>
