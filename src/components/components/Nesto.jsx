@@ -1,5 +1,5 @@
 const Nesto = (props) => {
-    return <div> C {props.children} D </div>;
+    return <div> Tacka A {props.children} Tacka B</div>;
   };
   
   export default Nesto;
