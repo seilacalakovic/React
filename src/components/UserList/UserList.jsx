@@ -52,4 +52,30 @@ function UserList(props) {
                       src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg"
                       alt="user"
                       width="50"
- UserList;
+                      className="rounded-circle"
+                    />
+                    <div className="media-body ml-4">
+                      <div className="d-flex align-items-center justify-content-between mb-1">
+                        <h6 className="mb-0">{u.username}</h6>
+                        <small className="small font-weight-bold">14 Dec</small>
+                      </div>
+                      <p className="font-italic text-muted mb-0 text-small">
+                        Lorem ipsum dolor sit amet, consectetur. incididunt ut
+                        labore.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))
+            ) : (
+              <p>Not yed loaded userList</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+export default UserList;
