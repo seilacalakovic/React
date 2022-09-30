@@ -80,4 +80,4 @@ function UserList(props) {
 
 
 
-export default UserList;
+export default UserList
