@@ -25,7 +25,7 @@ body {
     background: white;
     box-shadow: 3px 3px 10px 6px rgba(18, 17, 17, 0.06);
     font-weight: bold;
-    color: grey;
+    color: rgb(109, 108, 108);
     display: flex;
     align-items: center;
     cursor: pointer;
