@@ -22,7 +22,7 @@ body {
 
 .dropdown .dropdown-btn {
     padding: 15px 20px;
-    background: white;
+    background: rgb(249, 244, 244);
     box-shadow: 3px 3px 10px 6px rgba(18, 17, 17, 0.06);
     font-weight: bold;
     color: rgb(109, 108, 108);
