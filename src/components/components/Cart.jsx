@@ -36,7 +36,7 @@ const Cart = (props) => {
       style={{
         width: "100%",
         minHeight: "70vh",
-        background: "yellow",
+        background: "red",
         display: "flex",
         flexDirection: "column",
       }}
