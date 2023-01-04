@@ -24,13 +24,17 @@ const Cart = (props) => {
     return 5;
   }, []);
 
-  //   let total = 0;
 
-  //   articles.forEach((article) => {
-  //     console.log("CALCULATING TOTAL OF ARTICLES");
-  //     total += article.price;
-  //   });
 
+    let total = 0;
+
+    articles.forEach((article) => {
+      console.log("CALCULATING TOTAL OF ARTICLES");
+      total += article.price;
+    });
+
+
+    
   return (
     <div
       style={{
