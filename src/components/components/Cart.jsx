@@ -20,7 +20,7 @@ const Cart = (props) => {
   };
 
   const memoizedCallback = useCallback(() => {
-    console.log("IZVRSILAAA SE");
+    console.log("IZVRSILa SE");
     return 5;
   }, []);
 
