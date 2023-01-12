@@ -15,7 +15,7 @@ const Cart = (props) => {
     return total;
   }, [articles]);
 
-  const mojaF = (a, b) => {
+  const myF = (a, b) => {
     return a + b;
   };
 
