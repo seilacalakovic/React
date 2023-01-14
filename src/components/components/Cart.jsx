@@ -5,6 +5,7 @@ const Cart = (props) => {
   const articles = props.articles;
 
   let total = useMemo(() => {
+    
     let total = 0;
 
     articles.forEach((article) => {
