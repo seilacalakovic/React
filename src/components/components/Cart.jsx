@@ -2,6 +2,7 @@ import { useCallback, useMemo } from "react";
 import Article from "./Article";
 
 const Cart = (props) => {
+  
   const articles = props.articles;
 
   let total = useMemo(() => {
