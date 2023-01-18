@@ -31,7 +31,7 @@ const Cart = (props) => {
     let total = 0;
 
     articles.forEach((article) => {
-      console.log("CALCULATING TOTAL OF ARTICLES");
+      console.log("calculating TOTAL OF ARTICLES");
       total += article.price;
     });
 
