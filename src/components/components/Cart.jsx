@@ -24,8 +24,10 @@ const Cart = (props) => {
   const memoizedCallback = useCallback(() => {
     console.log("izvrsila se konacno");
 
+
     
     return 5;
+    
   }, []);
 
 
