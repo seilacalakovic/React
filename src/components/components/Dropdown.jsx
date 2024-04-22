@@ -74,7 +74,7 @@ const Dropdown = () => {
             setIsShown(!isShown);
           }}
         >
-          BUTTON ZA DROPDOWN
+          BUTTON ZA DROPDOWN button za dropdown
         </div>
       </div>
       {isShown && <div className="content">{checkSelected()}</div>}
