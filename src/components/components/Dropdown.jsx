@@ -34,6 +34,7 @@ const Dropdown = () => {
       return (
         <div>
           <h1>About o name klikni link za vise</h1>
+          <h2>About o name klikni link za vise</h2>
           <a href="#">Link</a>
         </div>
       );
@@ -74,7 +75,7 @@ const Dropdown = () => {
             setIsShown(!isShown);
           }}
         >
-          BUTTON ZA DROPDOWN button za dropdown
+          BUTTON ZA DROPDOWN
         </div>
       </div>
       {isShown && <div className="content">{checkSelected()}</div>}
