@@ -34,8 +34,6 @@ const Dropdown = () => {
       return (
         <div>
           <h1>About o name klikni link za vise</h1>
-          <h2>About o name klikni link za vise</h2>
-          <h3>about o name klikni link za vise</h3>
           <a href="#">Link</a>
         </div>
       );
